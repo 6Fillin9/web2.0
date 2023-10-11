@@ -1,0 +1,14 @@
+
+$colors: (
+    "header": rgb(153 249 157),
+    "p-hover-color": rgb(255, 255, 255),
+    "footer": rgb(153 249 157),
+    "grid": rgb(98 239 210),
+    "p-hover-bc color": rgb(74, 188, 112),
+    "grid__1": black,
+    "header__heading": rgb(98 239 210),
+);
+
+@function color($key){
+    @return map-get($colors,$key);
+};

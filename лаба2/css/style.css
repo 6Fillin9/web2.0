@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+*{
+    /* outline: auto lime; */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bebas Neue';
+}
+
+body{
+    background: rgb(85, 157, 202);
+}
+.wrapper{
+    max-width: 715px;
+
+}
+.header{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+.header__heading{
+    color: black;
+    font-family: 'Climate Crisis';
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+}
+.header__svg{
+    display: flex;
+    justify-content: center; 
+    font-size: 40px;
+    margin-top: 20px;
+    color: black;  
+}
+.header__svg:hover{
+    color: white;
+}
+
+.header__text{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    font-size: 27px;
+}
+.main__foto{
+    width: 400px;
+    margin-left: 15%;
+    margin-top: 10%;
+}
+.section__first{
+    display: flex;
+
+}
+.grid__one{
+    background-color: black;
+    width: 400px;
+    height: 400px;
+    display: grid;
+    grid-template-columns: 100px 290px;
+    grid-template-rows: 290px 100px;
+    margin-left: 100px;
+    margin-top: 145px;
+    gap: 10px;
+}
+.grid__two{
+    display: grid;
+    grid-template-rows: 119px 156px;
+    grid-gap: 15px;
+}
+.grid__besh{
+    background-color: #f0e0ca;
+}
+.grid__red{
+    display: grid;
+    grid-template-columns: 150px 200px;
+    background-color: red;
+}
+.grid__blue{
+    display: grid;
+    grid-template-rows: 100px 190px;
+    background-color: #23234b;
+}
+
+.grid__four{
+    display: grid;
+    grid-template-rows: 100px;
+    grid-template-columns: 240px 43px;
+    background-color: #000000;
+    gap: 7px;
+}
+.grid_fdf{
+    background-color: antiquewhite;
+}
+.grid__heh{
+    display: grid;
+    grid-template-rows: 50px 45px;
+    gap: 5px;
+}
+.grid__hehe{
+    background-color: antiquewhite;
+}
+.grid__hehee{
+    background-color: burlywood;
+}
+
+.section{
+    display: flex;
+}
+.section__foto{
+    margin-top: 10%;
+    margin-left: 15%;
+}
+.section__foto-div{
+    margin-top: 10%;
+    margin-left: 5%;
+    display: grid;
+    grid-template-columns: 160px 245px;
+    grid-template-rows: 351px 353px;
+}
+.section__grid-one{
+    display: grid;
+    grid-template-columns: 253px;
+    grid-template-rows: 108px 242px;
+}
+.section__grid-two{
+    background-color: white;
+}
+.section__grid-time{
+    margin-left: 5px;
+    background-color: white
+}
+.sectin__grid-title{
+    margin-top: 10px;
+    font-size: 54px;
+    line-height: 43px;
+    font-family: 'Bebas Neue';
+    margin-left: 2%;
+}
+.time__wrapper{
+    display: flex;
+    margin-left: 2%;
+    letter-spacing: 1px;
+}
+.twoCard__time{
+    margin-left: 5px;
+}
+.twoCard__time-small{
+    font-size: 9px;
+}
+.gridThree__card-black{
+    background-color: #000000;
+    width: 80px;
+    display: grid;
+    grid-template-rows: 319px 30px;
+    margin-left: 4px;
+}
+
+.gridFour__heading{
+    color: red;
+    font-size: 155px;
+    line-height: 118px;
+}
+
+.section__grid-four{
+    background-color: white;
+}
+.gridFour__heading{
+    color: red;
+    font-size: 143px;
+    line-height: 118px;
+}
+.gridFour__text{
+    color: red;
+    font-size: 38px;
+    line-height: 0;
+    margin-left: 3px;
+    margin-top: 10px;
+}
+.section__grid-three{
+    background-color: white;
+    margin-left: 5px;
+}
+.wrapper{
+    max-width: 1137px;
+    width: 100%;
+    margin: 0px auto;
+}
+.hover-effect-scale{
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+}
+.list__one{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    margin: 60px;
+    gap: 1rem;
+}
+.list__item {
+    display: grid;
+    width: 200px;
+}
+.list__img{
+    width: 100%;
+    height: 100%;
+    grid-area: 1 / 1 / -1 / -1;
+}
+.list__item:hover > .list__img {
+    filter: blur(5px);
+}
+
+.list__item:hover > .list__link {
+    scale: 1;
+    transition: .3s all ease-in-out;
+}
+
+.list__link {
+    font-size: 30px;
+    text-decoration: none;
+    color: red;
+    border: 1px solid red;
+    border-radius: 10px;
+    padding: 15px;
+    grid-area: 1 / 1 / -1 / -1;
+    place-self: center;
+    cursor: pointer;
+    opacity: none;
+    scale: 0;
+    cursor: pointer;    
+}
+
+
+
+.svg__one{
+    background-color: black;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    gap: 6px;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 373px 759px;
+    grid-template-rows: 456px;
+}
+.svg__two{
+    gap: 6px;
+    display: grid;
+    grid-template-columns: 370px;
+    grid-template-rows: 100px 350px;
+}
+.element{
+    background: linear-gradient(#FFCDA5, #EE4D5F);
+}
+.svg__two-text{
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    font-size: 50px;
+}
+.svg__four{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.svg__text{
+    padding-top: 20px;
+    color: black;
+    margin-left: 45px;
+    text-decoration: none;
+}
+.svg__three{
+    display: grid;
+    grid-template-columns: 127px 127px 127px 127px 127px 127px;
+    grid-template-rows: 152px 152px 152px;
+    grid-template-areas:
+        " svg1 svg1 svg1 svg1 svg1 svg1"
+        " svg2 svg2 svg2 svg3 svg3 svg3"
+        "svg4 svg4 svg5 svg5 svg6 svg6 ";
+    overflow: hidden;
+}
+.element-first-row--1{
+    grid-area: svg1;
+    grid-row-start: svg1;
+    grid-column-start: svg1;
+    grid-row-end: svg1;
+    grid-column-end: svg1;
+}
+.icon{
+    width: 100%;
+    height: 100%;
+}
+.element-first-row--2{
+    grid-area: svg2;
+    grid-row-start: svg2;
+    grid-column-start: svg2;
+    grid-row-end: svg2;
+}
+.element-first-row--3{
+    grid-area: svg3;
+    grid-row-start: svg3;
+    grid-column-start: svg3;
+    grid-row-end: svg3;
+}
+.element-first-row--4{
+    grid-area: svg4;
+    grid-row-start: svg4;
+    grid-column-start: svg4;
+    grid-row-end: svg4; 
+}
+.element-first-row--5{
+    grid-area: svg5;
+    grid-row-start: svg5;
+    grid-column-start: svg5;
+    grid-row-end: svg5; 
+}
+.element-first-row--6{
+    grid-area: svg6;
+    grid-row-start: svg6;
+    grid-column-start: svg6;
+    grid-row-end: svg6; 
+}
+.wrapper__svg{
+    max-width: 950px;
+    width: 100%;
+    margin: 0px auto;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+}
+.footer__svg{
+    font-size:  40px;
+    margin-bottom: 20px;
+}
+
+

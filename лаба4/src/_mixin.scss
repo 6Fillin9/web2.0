@@ -1,0 +1,41 @@
+
+
+@mixin header{
+    @include display;
+    font-size: 27px;
+}
+
+@mixin wrapper {
+    display: flex;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1240px;
+    padding: 10px 10px;
+}
+
+@mixin display {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin fontSize{
+    font-size: 25px;
+}
+
+@mixin gridBlock{
+    width: 50px;
+    height: 50px;
+    background-color: rgb(221, 234, 110);
+    border-radius: 10px;
+}
+
+@mixin gridWrapper{
+    font-weight: 100;
+    display: grid;
+    grid-template-columns: repeat(17, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    gap: 5px;
+}
+@mixin gradient{
+    background: linear-gradient(blue,pink);
+}

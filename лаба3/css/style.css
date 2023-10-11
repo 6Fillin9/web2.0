@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+*{
+    /* outline: auto lime; */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bebas Neue';
+}
+
+body{
+    background: linear-gradient( to bottom right , #78F2E9, #B65EBA);
+}
+.wrapper{
+    max-width: 715px;
+
+}
+.wrapper__svg{
+    max-width: 950px;
+    width: 100%;
+    margin: 0px auto;
+}
+.header{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+.header__heading{
+    color: black;
+    font-family: 'Climate Crisis';
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+}
+.header__svg{
+    display: flex;
+    justify-content: center; 
+    font-size: 40px;
+    margin-top: 20px;
+    color: black;  
+}
+.header__text{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    font-size: 27px;
+}
+.main__ul{
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    margin-top: 10%;
+}
+.main__window{
+    width: 200px;
+    height: 200px;
+    background-color: #8BD6A0;
+}
+.krest {
+    width: 200px;
+    height: 200px;
+    padding-top: 15px;
+    padding-left: 6px;
+}
+.krest__button:hover{
+    color: white;
+    background-color: gray;
+}
+.house{
+    width: 200px;
+    height: 200px;   
+}
+.house__button:hover{
+    color: white;
+    background-color: gray;
+}
+.lupa{
+    width: 200px;
+    height: 200px;
+}
+.lupa__button:hover{
+    background-color: gray;
+}
+.menu{
+    width: 390px;
+    height: 390px;
+}
+.burgerMenu{
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    padding: 4px;
+}
+.burgerMenu:hover{
+    color: white;
+    background-color: gray;
+}
+
+.burgerMenu line{
+	transition: transform 0.25s;
+} 
+
+.burgerMenu.active .line1 {
+    transform-origin: center center;
+    animation: line1 0.5s ease forwards;
+  }
+  
+  .burgerMenu.active .line2 {
+    animation: line2 0.3s ease forwards;
+  }
+  
+  .burgerMenu.active .line3 {
+    transform-origin: center center;
+    animation: line3 0.5s ease forwards;
+  }
+  
+  @keyframes line1 { 
+    from { 
+    } to { 
+        transform: translateX(-85px) translateY(45px)
+        rotate(45deg);
+    } 
+  } 
+  @keyframes line2 { 
+    from { 
+        opacity: 1; 
+    } to { 
+        opacity: 0; 
+    } 
+  } 
+  @keyframes line3 { 
+    from { 
+    } to { 
+        transform:  translateX(25px) translateY(-57px)
+        rotate(-45deg);
+    } 
+  }
+  
+.burgerMenu:hover{
+    cursor: pointer;
+}
+.section__house{
+    max-width: 1000px;
+    width: 100%;
+    margin: 0px auto;
+}
+.section__house-text{
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+    font-size: 40px;
+}
+.house__wrapper{
+    max-width: 1000px;
+    width: 100%;
+    margin: 0px auto;
+    display: flex;
+}
+.myHouse{
+    width: 1000px;
+    height: 1000px;
+}
+
+.house__line,
+.house__neighbors,
+.house__why,
+.house__myHome{
+    opacity: 0;
+    fill:rgb(79, 75, 76)
+}
+
+.text-active {
+    opacity: 1;
+}
+
+.text-active {
+    opacity: 1;
+}
+
+.text-active {
+    opacity: 1;
+}
+
+text {
+    font-size: 30px;
+}
+
+.city__wrapper {
+    max-width: 500px;
+    margin: 0px auto;
+    padding-top: 10%;
+    width: 500px;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+}
+
+.city__text{
+    display: flex;
+    justify-content: center;
+    padding-top: 10%;
+    font-size: 40px;
+}
+.city__block{
+    width: 500px;
+    height: 400px;
+    background-color: #F00B51;
+}
+
+.city__animation {
+    animation: city infinite linear;
+    animation-duration: 10s;
+    position: absolute;
+    z-index: 30;
+}
+.city__animation-1 {
+    animation: city infinite linear;
+    animation-duration: 10s;
+    position: absolute;
+    animation-delay: 5s;
+    z-index: 30;
+}
+
+.city__animation-2 {
+    animation: city infinite linear;
+    animation-duration: 6s;
+    position: absolute;
+    margin-top: 75px;
+    z-index: 100;
+}
+.city__animation-2-2 {
+    animation: city infinite linear;
+    animation-duration: 6s;
+    animation-delay: 3s;
+    position: absolute;
+    margin-top: 75px;
+    z-index: 100;
+}
+.city__animation-3{
+    animation: city infinite linear;
+    animation-duration: 3s;
+    animation-delay: 1.5s;
+    position: absolute;
+    z-index: 150;
+    margin-top: 120px;
+}
+.city__animation-3-3{
+    animation: city infinite linear;
+    animation-duration: 3s;
+    position: absolute;
+    z-index: 150;
+    margin-top: 120px;
+}
+.city__animation-sun{
+    animation: city infinite linear;
+    animation-duration: 20s;
+    position: absolute;
+    z-index: 10;
+}
+
+@keyframes city {
+    to {
+        transform: translate(600px);
+    }
+    from {
+        transform: translate(-800px);
+    }
+}
+.footer{
+    display: flex;
+    justify-content: center;
+}
+.footer__svg{
+    font-size:  40px;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,177 @@
+*{
+    background:  #99f2c8;
+  }
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+  .header{
+    display: flex;
+    justify-content: center;
+  }
+  .skip-link{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 15px;
+    background: #F498AD;
+    transform: translateY(-100%);
+  }
+    .skip-link:focus {
+      transform: translateY(0);
+    } 
+    .heading{
+        display: flex;
+        justify-content: center;
+        font-size: 25px;
+        color: white;
+    }
+    .burgerMenu{
+      margin-left: 3em;
+      margin-top: 3em;
+      width: 137px;
+      height: 85px;
+      overflow: hidden;
+      padding: 10px 10px;
+      border-radius: 30px;
+}
+    .container{
+        display: flex;
+        gap: 50em;
+    }
+    .burgerMenu:hover{
+        color: white;
+    }
+
+.burgerMenu line{
+transition: transform 0.25s;
+} 
+
+.burgerMenu.active .line1 {
+transform-origin: center center;
+animation: line1 0.5s ease forwards;
+}
+
+.burgerMenu.active .line2 {
+animation: line2 0.3s ease forwards;
+}
+
+.burgerMenu.active .line3 {
+transform-origin: center center;
+animation: line3 0.5s ease forwards;
+}
+
+@keyframes line1 { 
+from { 
+} to {
+    transform: translateX(-55px) translateY(25px)
+    rotate(40deg);
+} 
+} 
+@keyframes line2 { 
+from { 
+    opacity: 1; 
+} to { 
+    opacity: 0; 
+} 
+} 
+@keyframes line3 { 
+from { 
+} to { 
+    transform:  translateX(30px) translateY(-5px)
+    rotate(-40deg);
+} 
+}
+
+.burgerMenu:hover{
+cursor: pointer;
+}
+.notification {
+position: fixed;
+bottom: 20px;
+right: 20px;
+background-color: #fff;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+padding: 10px;
+border-radius: 4px;
+display: none;
+animation: slideIn 0.56s;
+}
+
+.notification.show {
+display: block;
+}
+
+.menu{
+max-width: 100%;
+height: auto;
+}
+.menu:focus{
+border: 1px solid white;
+}
+.menu-list{
+        display: none;
+        display: none;
+        background: #a8ff78;
+        border-radius: 4px;
+        height: 110px;
+        border: 0px solid white;
+}
+.menu-link_title{
+    color: white;
+    background: #a8ff78;
+}
+.menu-list.show {
+    background: #a8ff78;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    font-size: 17px;
+    height: 160px;
+}
+.menu-link{
+    padding-right: 47px;
+    padding-top: 2px;
+    text-align: center;
+    display: block;
+    background: #a8ff78;
+}
+.close-button {
+    border: none;
+    background: none;
+    color: #888;
+    cursor: pointer;
+    outline: none;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.notification-content{
+    display: flex;
+    flex-direction: column;
+    background: white;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.name{
+    background: white;
+}
+.message{
+    background: white;
+}

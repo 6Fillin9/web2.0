@@ -1,0 +1,23 @@
+body{
+    background: #a8ff78;
+}
+.animate__block{
+    background: green;
+    width: 10px;
+    height: 10px;
+    margin-left: 45em;
+    margin-top: 5px;
+}
+.animate__button{
+    width: 100px;
+    height: 60px;
+    border-radius: 25px;
+    background: linear-gradient(#43C6AC, #F8FFAE);
+    color: white;
+    border-style: none;
+    cursor: pointer;
+}
+button{
+    margin-left: 48em;
+    margin-top: 6em;
+}

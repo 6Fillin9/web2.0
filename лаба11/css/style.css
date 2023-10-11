@@ -1,0 +1,23 @@
+body{
+    background: #43C6AC;
+}
+.wrapper{
+    color: white;
+    padding-left: 37em;
+    margin-top: 4em;
+}
+.red-text{
+    color: red;
+}
+input{
+    outline: none;
+    border: none;
+}
+.button{
+    background: green;
+    color: white;
+    cursor: pointer;
+}
+.item{
+    list-style-type: decimal;
+}
