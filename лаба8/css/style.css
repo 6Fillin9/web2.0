@@ -7,6 +7,8 @@ body{
     height: 10px;
     margin-left: 45em;
     margin-top: 5px;
+    position: absolute; 
+    z-index: -1;
 }
 .animate__button{
     width: 100px;
