@@ -36,4 +36,4 @@
 # Card -> div.card>svg.card__svg*5 + p.card__text>img.card__img+h3.card__name+p.card__geo
 ![Image alt](Card.png)
 # Registration -> div.section>p.section__text+h3.section__header>form.form>label.form__label>input.form__email+button.form__button
-![Image alt](registration.png)
+![Image alt](Registration.png)
