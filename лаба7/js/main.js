@@ -1,184 +1,186 @@
-// Задание 1
+//Задание 1
+const countSandwiches = (bread, cheese) => {
+  let countSandwiches = Math.trunc(bread / 2);
 
-let bread = prompt ('Введите количество хлеба');
-let cheese = prompt('Введите количество сыра'); 
-
-const product={
-    "bread":bread,
-    "cheese":cheese
-}
-
-function countSandwiches(product){
-    const breadsForSandwich = Math.floor(product.bread/2)
-    if (breadsForSandwich > product.cheese) {
-        return product.cheese
-    }
-    return breadsForSandwich
-}
-    console.log(' Задание 1 - ' + countSandwiches(product));
-
-
-// Задание 2
-
-let number = prompt('Введите число для таблицы умножения')
-let brush = 0
-function multiplication(number) {
-    columns = number
-    rows = number
-    if (brush === 0) {
-        let result = [];
-        for (let startRow=0;  startRow < rows; startRow++){
-            if (startRow === 0) {
-                result.push('#');
-            } else{
-                result.push(startRow);
-            }
-            
-        }
-        let myVar3 = result.join(' ')
-        console.log(myVar3)
-    }
-    for (let startColumn=0;  startColumn < columns; startColumn++){
-        let result = [];
-        if (startColumn > 0) {
-            result.push(startColumn);
-            for (let startRow=1;  startRow < rows; startRow++){
-                if (startColumn*startRow !=0){
-                    result.push(startColumn*startRow);
-                }
-            }
-            let myVar3 = result.join(' ')
-            console.log(myVar3)
-        }
-        
-    }
-}
-multiplication(number);
-
-// Задание 3
-
-let message = prompt('Введите сообщение');
-message=message.split(' ');
-function distribution (message){
-    let max = 0;
-    for (let startArray=0;  startArray < message.length; startArray++){
-        let ln = message[startArray]
-        if (ln.length > max) {
-            ln = message[startArray]
-            max = ln.length
-        }
-    }
-    let zwe='*'
-    let space=' '
-    console.log(zwe.repeat(max+4))
-    for (let elementArray=0;  elementArray < message.length; elementArray++){
-        let lenWhiteSpace = max-message[elementArray].length
-        console.log(`* ${message[elementArray]}${space.repeat(lenWhiteSpace)} *`)
-    }
-
-    console.log(zwe.repeat(max+4))
-}
-
-distribution (message)
-
-// Задание 4
-
-let array1 = prompt('Введите первый массив');
-let array2 = prompt('Введите второй массив');
-array1=array1.split(' ');
-array2=array2.split(' ');
-
-let array = [];
-function mergeArrays(array1, array2) {
-    const merged = [];
-    const maxLength = Math.max(array1.length, array2.length);
-    for (let i = 0; i < maxLength; i++) {
-      if (i < array1.length) {
-        merged.push(array1[i]);
-      }
-      if (i < array2.length) {
-        merged.push(array2[i]);
+  if (bread < 2 || cheese < 1) {
+    return "The sandwich requires at least two slices of bread and one slice of cheese";
+  } else if (countSandwiches <= cheese) {
+    return countSandwiches;
+  } else {
+    while (countSandwiches > cheese) {
+      countSandwiches -= 1;
+      if (countSandwiches === cheese) {
+        return countSandwiches;
       }
     }
-    return merged;
-}
-console.log(mergeArrays(array1, array2))
+  }
+};
 
-// Задание 5
+let bread = 5;
+let cheese = 6;
+console.log(
+  `countSandwiches({bread: ${bread}, cheese: ${cheese}}) -> ${countSandwiches(
+    bread,
+    cheese
+  )}`
+);
 
+//Задание 2
+const generateMultiplicationTable = (number) => {
+  let output = "";
+  for (let i = 1; i <= number; i++) {
+    let row = " ";
+    for (let j = 1; j <= number; j++) {
+      row += "  " + i * j;
+    }
+    output += row + "\n";
+  }
+  return output;
+};
 
-let arr = prompt('Введите ваш массив');
-arr=arr.split(' ');
-function countUniqueValues(arr) {
-    // создаем пустой объект
-    let obj = {};
-    
-    // проходимся по каждому элементу массива и увеличиваем количество по соответствующему ключу в объекте
-    for (let i = 0; i < arr.length; i++) {
-      if (obj[arr[i]]) {
-        obj[arr[i]]++;
-      } else {
-        obj[arr[i]] = 1;
+let number = 5;
+console.log(
+  `generateMultiplicationTable(5)\n\n>\n\n${generateMultiplicationTable(
+    number
+  )}`
+);
+
+//Задание 3
+const showQuote = (arrWord, symbol) => {
+  symbol = String(symbol);
+
+  let maxLen = 0;
+  let outString = "";
+
+  arrWord.forEach((word) => {
+    if (word.length >= maxLen) {
+      maxLen = word.length;
+    }
+  });
+
+  maxLen += 4;
+  outString += symbol.repeat(maxLen) + "\n";
+  arrWord.forEach((word) => {
+    outString +=
+      symbol +
+      " " +
+      word +
+      " ".repeat(maxLen - word.length - 3) +
+      symbol +
+      "\n";
+  });
+  outString += symbol.repeat(maxLen) + "\n";
+  return outString;
+};
+
+let arr = ["Hello", "World", "In", "JS"];
+let symbol = "*";
+console.log(`showQuote([${arr}], '${symbol}')\n\n>\n${showQuote(arr, symbol)}`);
+
+//Задание 4
+const combineArrays = (arrFirst, arrSecond) => {
+  let outArr = [];
+  let lengthArrFirst = arrFirst.length;
+  let lengthArrSecond = arrSecond.length;
+
+  if (lengthArrFirst >= lengthArrSecond) {
+    for (let i = 0; i < lengthArrFirst; i++) {
+      outArr.push(arrFirst[i]);
+      if (i < lengthArrSecond) {
+        outArr.push(arrSecond[i]);
       }
     }
-    console.table(obj);
-    return obj;
-}
+  } else {
+    for (let i = 0; i < lengthArrSecond; i++) {
+      if (i < lengthArrFirst) {
+        outArr.push(arrFirst[i]);
+      }
+      outArr.push(arrSecond[i]);
+    }
+  }
+  return outArr;
+};
 
+let arrFirst = [1, 2, 3];
+let arrSecond = ["a", "b", "c", "d"];
+console.log(
+  `combineArrays([${arrFirst}], [${arrSecond}]) -> [${combineArrays(
+    arrFirst,
+    arrSecond
+  )}]`
+);
 
-countUniqueValues(arr);
+//Задание 5
+
+const countUniqueValues = (arr) => {
+  let uniqueArr = {};
+  for (let i = 0; i < arr.length; i++) {
+    let a = arr[i];
+    if (uniqueArr[a] !== undefined) {
+      ++uniqueArr[a];
+    } else {
+      uniqueArr[a] = 1;
+    }
+  }
+  return uniqueArr;
+};
+
+let noUniqueArr = [1, 2, 1, 2, 3, 4, 2, 5];
+console.log(`countUniqueValues([${noUniqueArr}]) ->`);
+console.log(countUniqueValues(noUniqueArr));
 
 // Задание 6
 
-const burgerMenu = document.querySelector('.burgerMenu');
-    const handleBurgerClick = (evt) => {
-      evt.preventDefault();
-      burgerMenu.classList.toggle('active');
-      menuList.classList.toggle('show');
-    }
-    burgerMenu.addEventListener('click', handleBurgerClick);
+const burgerMenu = document.querySelector(".burgerMenu");
+const closeMenuButton = document.querySelector(".close");
+const menuList = document.querySelector(".menu-list");
 
-    const menuList = document.querySelector('.menu-list');
+const handleBurgerClick = (evt) => {
+  evt.preventDefault();
+  burgerMenu.classList.toggle("active");
+  menuList.classList.toggle("show");
+};
+
+const closeMenu = () => {
+  burgerMenu.classList.remove("active");
+  menuList.classList.remove("show");
+};
+
+burgerMenu.addEventListener("click", handleBurgerClick);
+
+document.addEventListener("click", (evt) => {
+  if (!burgerMenu.contains(evt.target) && !menuList.contains(evt.target)) {
+    closeMenu();
+  }
+});
 
 // Задание 7
-document.addEventListener('DOMContentLoaded', function() {
-    var notification = document.getElementById('notification');
-    var closeButton = document.getElementById('closeButton');
-  
-    // Функция для показа уведомления с заданными данными
-    function showNotification(data) {
-      var name = document.getElementById('name');
-      var message = document.getElementById('message');
-  
-      name.textContent = data.name;
-      message.textContent = data.message;
-  
-      notification.classList.add('show');
-  
-      // Закрываем уведомление по клику на кнопку закрытия
-      closeButton.addEventListener('click', function() {
-        hideNotification();
-      });
-    }
-  
-    // Функция для скрытия уведомления
-    function hideNotification() {
-      notification.classList.remove('show');
-    }
-  
-    // Пример данных для уведомления
-    var notificationData = {
-      name: 'Всем привет!',
-      message: 'Меня зовут Стаскевич Денис',
-    };
-  
-    // Показываем уведомление при загрузке страницы
-    showNotification(notificationData);
-  });
-  
+document.addEventListener("DOMContentLoaded", function () {
+  var notification = document.getElementById("notification");
+  var closeButton = document.getElementById("closeButton");
 
-      
-      
+  function showNotification(data) {
+    var name = document.getElementById("name");
+    var message = document.getElementById("message");
 
+    name.textContent = data.name;
+    message.textContent = data.message;
 
+    notification.classList.add("show");
 
+    closeButton.addEventListener("click", function () {
+      hideNotification();
+    });
+  }
+
+  function hideNotification() {
+    notification.classList.remove("show");
+  }
+
+  var notificationData = {
+    name: "Всем привет!",
+    message: "Меня зовут Стаскевич Денис",
+  };
+
+  showNotification(notificationData);
+});
